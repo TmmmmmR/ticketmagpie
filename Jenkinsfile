@@ -25,9 +25,7 @@ pipeline {
         }
         
          stage('Quality Gate') {
-            when {
-                branch 'production' 
-            }steps {
+             steps {
                 sh 'sleep 5s'
                 timeout(time: 5, unit: 'MINUTES') {
                     script {
