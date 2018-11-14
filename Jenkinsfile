@@ -7,9 +7,11 @@ pipeline {
             }        
         }
         stage("SonarQube analysis") {
-            steps {
+            when {
+                branch 'production' 
+            } steps {
                 withSonarQubeEnv('sonar') {
-                        sh 'mvn sonar:sonar -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=a17ed4beaffbc0409c4b8f42c00a7c35f98656bc'
+                        sh 'mvn sonar:sonar'
                 }
             }
         }
