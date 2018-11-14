@@ -95,7 +95,7 @@
               <artifactId>dependency-check-maven</artifactId>
               <version>3.3.4</version>
               <configuration>
-                  <failBuildOnCVSS>8</failBuildOnCVSS>
+                  <failBuildOnCVSS>1</failBuildOnCVSS>
               </configuration>
               <executions>
                   <execution>
