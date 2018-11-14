@@ -7,7 +7,9 @@ pipeline {
             }        
         }
         stage("SonarQube analysis") {
-            steps {
+            when {
+                branch 'production' 
+            } steps {
                 withSonarQubeEnv('sonar') {
                         sh 'mvn sonar:sonar'
                 }
