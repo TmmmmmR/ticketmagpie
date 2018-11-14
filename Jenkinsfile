@@ -20,7 +20,7 @@ pipeline {
             }
             steps {
                 input message: 'Deploy for development ? (Click "Proceed" to continue)'
-                sh 'Deploying to development ...'
+                //sh 'Deploying to development ...'
             }
         }
         stage('Deploy for production') {
@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 input message: 'Deploy to production ? (Click "Proceed" to continue)'
-                sh 'Deploying to production ...'
+                //sh 'Deploying to production ...'
             }
         }
         
