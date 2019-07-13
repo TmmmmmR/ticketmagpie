@@ -1,9 +1,7 @@
-@Library('pipeline-library-demo')_
+@Library('SecLib')_
 
-stage('Demo') {
+stage('DAST Analysis') {
 
-  echo 'Hello World'
-
-  sayHello 'Dave'
+  zap 'https://target.com'
 
 }
