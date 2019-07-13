@@ -1,7 +1,9 @@
-@Library('SecLib')_
+@Library('pipeline-library-demo')_
 
 stage('Demo') {
-    echo 'Hello world'
-    sayHello 'Dave'
-}
 
+  echo 'Hello World'
+
+  sayHello 'Dave'
+
+}
